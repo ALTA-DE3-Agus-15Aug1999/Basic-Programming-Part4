@@ -1,5 +1,14 @@
 def draw_xyz(N):
     pattern = ""
+    for i in range(1, N*N + 1):
+        if i % 3 == 0:
+            pattern += "X "
+        elif i % 2 == 1:
+            pattern += "Y "
+        else:
+            pattern += "Z "
+        if i % N == 0:
+            pattern += "\n"
     return pattern
 
 if __name__ == '__main__':
