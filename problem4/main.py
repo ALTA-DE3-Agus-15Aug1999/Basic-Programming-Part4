@@ -1,5 +1,16 @@
 def ubah_huruf(sentence):
+    alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     pattern = ""
+    for char in sentence:
+        if char.isalpha():
+            index = (alphabet.index(char.upper()) + 10) % 26
+            encrypted_char = alphabet[index]
+            if char.islower():
+                pattern += encrypted_char.lower()
+            else:
+                pattern += encrypted_char
+        else:
+            pattern += char
     return pattern
 
 if __name__ == '__main__':
