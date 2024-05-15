@@ -15,7 +15,7 @@ class TestCetakTablePerkalian(unittest.TestCase):
             " 9 18 27 36 45 54 63 72 81\n"
         )
         result = cetak_table_perkalian(9)
-        self.assertEqual(result, expected_output)
+        self.assertEqual(print(result),print(expected_output))
         
 if __name__ == '__main__':
     unittest.main()
